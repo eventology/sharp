@@ -19,6 +19,7 @@ const distBaseUrl = process.env.SHARP_DIST_BASE_URL || `https://github.com/lovel
 
 try {
   const useGlobalLibvips = libvips.useGlobalLibvips();
+  npmLog.info('Should use global vips:', useGlobalLibvips);
   if (useGlobalLibvips) {
     const globalLibvipsVersion = libvips.globalLibvipsVersion();
     npmLog.info('sharp', `Detected globally-installed libvips v${globalLibvipsVersion}`);
